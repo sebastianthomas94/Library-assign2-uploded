@@ -162,13 +162,9 @@ var books=[
 
 
 app.set("view engine", "ejs");
-app.set("views", "./src/views");               //Not needed if this is the directry
+app.set("views", "./views");               //Not needed if this is the directry
 
 
-
-app.listen(process.env.PORT || 3000,()=>{
-    console.log("server is running on http://localhost:3000");
-});
 
 
 var booksrouter=require("./routes/booksrouter");                    //books router
@@ -205,3 +201,10 @@ app.get("/", function(req,res){
     res.render("singlebook",{ptitle:"Library", nav:[{link:"/books", ntitle:"Books"},{link:"/authors", ntitle:"Authors"}],books:books[id]});
 
 });  */
+
+
+
+app.listen(process.env.PORT || 3000,()=>{
+    console.log("server is running on http://localhost:3000");
+});
+
