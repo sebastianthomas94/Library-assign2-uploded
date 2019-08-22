@@ -162,8 +162,7 @@ var books=[
 
 
 app.set("view engine", "ejs");
-app.set("views", "./views");               //Not needed if this is the directry
-
+          
 
 
 
